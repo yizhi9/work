@@ -1,0 +1,10 @@
+package com.isoft.main;
+
+
+public class Run {
+	public static void main(String[] args) {
+		MyThread my=new MyThread();
+		Thread thread=new Thread(my);
+		thread.start();
+	}
+}

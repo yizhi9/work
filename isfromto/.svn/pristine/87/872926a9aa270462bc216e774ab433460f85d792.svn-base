@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<jardesc>
+    <jar path="D:/isfromto.jar"/>
+    <options buildIfNeeded="true" compress="false" descriptionLocation="/isfromto/getdate.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/isfromto/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <file path="/isfromto/MANIFEST.MF"/>
+        <file path="/isfromto/getdate.jardesc"/>
+        <file path="/isfromto/.classpath"/>
+        <javaElement handleIdentifier="=isfromto/src"/>
+        <file path="/isfromto/.project"/>
+    </selectedElements>
+</jardesc>

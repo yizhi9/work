@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+　　<transcacheconfig>
+
+　　<fromtocache>
+	<!-- 是否搬迁根目录下的全部 -->
+	<transall>false</transall>
+	<!-- transall 为false 则只搬迁下列配置文件目录 -->
+	<transname>chongqing;</transname>
+	<!-- 日志记录路径 -->
+	<logpath>/root/isofthome/datapump/transdatamanager/transdata/log/</logpath>
+　　<!--高速数据接收缓冲区父路径-->
+　　  <from>/home/</from>
+	<!--数据留存缓冲区父路径-->
+　　  <to>/mnt/isdata/</to>
+　　<!--迁移完毕是否删除源工作用户下数据存放文件-->
+　　  <delete>false</delete>
+	<!-- 多久迁徙一次  单位毫秒 --> 
+	<interval>60</interval>
+	<!--除了配置的黑名单，其它文件都迁移；  黑名单就是不迁移的文件 ； false为不读取黑名单 ； 黑名单和白名单不能同时为true，如果都写true，只有白名单生效-->
+	<blackflag>true</blackflag>
+	<blackfilelist>.bash_profile;.bashrc;.emacs;.bash_logout;.temp;</blackfilelist>
+	<!-- 白名单的意思是只迁徙这类型的文件； false为不读取白名单 -->
+	<blankflag>false</blankflag>
+	<blankfilelist>.txt;.xml;</blankfilelist>
+	<!-- 选择md5或者crc32中的一种，只能有一个为true -->
+	<md5>true</md5>
+	<crc32>false</crc32>
+　　</fromtocache> 
+
+   <!-- 传输工作用户 -->
+   <transperson>
+ 	    <!-- 工作用户名 -->
+   		<person>chongqing</person>
+   		<!-- 用户的优先级别 系统级0、 一般2、 较高1 -->
+   		<personpriority>0</personpriority>
+   		<!-- 业务优先 -->
+   		<businesspriority>
+   		<!-- 目录优先 用;号隔开-->
+   			<contents>sam;ns</contents>
+   			<!-- 文件优先 用;号隔开 -->
+			<files>.txt</files>
+   		</businesspriority>
+   		<!-- 内置优先 -->
+   		<inlaypriority>
+   		<!-- 小于size的优先 -->
+   			<size>1024</size>
+   		</inlaypriority>
+   </transperson>
+   
+　　</transcacheconfig>
+</xml-body>
